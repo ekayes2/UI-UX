@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Options Prototype</title>
+    <title>Dark Mode Product Editor</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,125 +13,295 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="container py-5 prototype-shell">
-      <div class="screen-selector btn-group p-1 rounded-pill mb-4" role="group" aria-label="Screen selector">
-        <button class="btn selector-btn" type="button">Menu</button>
-        <button class="btn selector-btn active" type="button">Product options</button>
-        <button class="btn selector-btn" type="button">Add-ons</button>
-      </div>
-
-      <section class="d-flex flex-wrap justify-content-between gap-3 align-items-start mb-4">
-        <div>
-          <h1 class="h3 mb-2">Product options</h1>
-          <p class="text-secondary mb-0">Create option groups and define product customizations available to customers.</p>
-        </div>
-        <div class="d-flex gap-2">
-          <button type="button" class="btn btn-outline-light rounded-pill px-4">Add option group</button>
-          <button type="button" class="btn btn-primary rounded-pill px-4">Save changes</button>
-        </div>
-      </section>
-
-      <section class="option-group card-group-outer" data-group>
-        <header class="group-header d-flex flex-wrap align-items-center justify-content-between gap-3" data-toggle-group>
-          <div class="d-flex align-items-center gap-3">
-            <input class="form-check-input mt-0" type="checkbox" checked aria-label="Enable Keyring options" />
-            <h2 class="h5 mb-0">Keyring options</h2>
-            <span class="badge rounded-pill text-bg-secondary">4 items</span>
+    <main class="app-shell">
+      <aside class="sidebar-panel">
+        <div class="brand-block">
+          <div class="brand-mark">UC</div>
+          <div>
+            <p class="eyebrow mb-1">Admin workspace</p>
+            <h1 class="brand-title mb-0">US Craft</h1>
           </div>
-          <div class="d-flex align-items-center gap-2">
-            <button class="btn btn-link text-light p-0 collapse-btn" type="button" aria-expanded="true" aria-label="Collapse group">
-              <span class="chevron">⌄</span>
-            </button>
-            <button class="btn btn-sm btn-outline-danger rounded-pill" type="button">Remove</button>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Primary navigation">
+          <button class="nav-chip active" type="button">Products</button>
+          <button class="nav-chip" type="button">Variants</button>
+          <button class="nav-chip" type="button">Media</button>
+          <button class="nav-chip" type="button">SEO</button>
+          <button class="nav-chip" type="button">FAQs</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="sidebar-label">Editing</p>
+          <h2 class="h6 mb-2">Elastic Fabric Wristbands</h2>
+          <p class="text-secondary small mb-0">
+            Modernized dark-mode editor focused on hierarchy, spacing, and cleaner controls.
+          </p>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow mb-2">Product manager</p>
+            <h2 class="page-title mb-2">Redesigned product editor</h2>
+            <p class="text-secondary mb-0">
+              A cleaner dark-mode experience for managing product details, media, variants, and merchandising.
+            </p>
+          </div>
+          <div class="topbar-actions">
+            <button type="button" class="btn btn-outline-light rounded-pill px-4">Preview</button>
+            <button type="button" class="btn btn-primary rounded-pill px-4">Save product</button>
           </div>
         </header>
 
-        <div class="group-content mt-3" data-group-content>
-          <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <label class="form-label">Caption name</label>
-              <input type="text" class="form-control" value="Engraving options" />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Short description</label>
-              <input type="text" class="form-control" value="Pick your shape and finish" />
-            </div>
+        <section class="hero-panel">
+          <div>
+            <span class="status-badge">Live product</span>
+            <h3 class="hero-title mt-3">Woven embroidered keyring</h3>
+            <p class="text-secondary mb-0">
+              Reframed into grouped cards with stronger contrast, simplified actions, and a dashboard-style layout.
+            </p>
           </div>
-
-          <div class="d-flex flex-wrap gap-3 mb-4">
-            <button type="button" class="toggle-pill is-active" data-ui-toggle>
-              <span>Required</span><span class="toggle-state">Yes</span>
-            </button>
-            <button type="button" class="toggle-pill" data-ui-toggle>
-              <span>Multi-select</span><span class="toggle-state">No</span>
-            </button>
-          </div>
-
-          <div class="d-flex flex-column gap-3">
-            <article class="item-row d-flex flex-wrap align-items-center justify-content-between gap-3">
-              <div class="d-flex align-items-center gap-3">
-                <div class="thumb-placeholder" aria-hidden="true"></div>
-                <div>
-                  <h3 class="h6 mb-1">Silver Ring</h3>
-                  <p class="text-secondary small mb-0">Classic polished loop</p>
-                </div>
-              </div>
-              <div class="d-flex flex-wrap align-items-center gap-2">
-                <label class="small text-secondary mb-0">Price</label>
-                <input type="number" class="form-control price-input" value="5" min="0" step="0.01" />
-                <button type="button" class="btn btn-sm btn-outline-light">Edit</button>
-                <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
-              </div>
+          <div class="hero-stats">
+            <article class="stat-card">
+              <span class="stat-label">SKU</span>
+              <strong>EMK002</strong>
             </article>
-
-            <article class="item-row d-flex flex-wrap align-items-center justify-content-between gap-3">
-              <div class="d-flex align-items-center gap-3">
-                <div class="thumb-placeholder" aria-hidden="true"></div>
-                <div>
-                  <h3 class="h6 mb-1">Matte Ring</h3>
-                  <p class="text-secondary small mb-0">Soft brushed finish</p>
-                </div>
-              </div>
-              <div class="d-flex flex-wrap align-items-center gap-2">
-                <label class="small text-secondary mb-0">Price</label>
-                <input type="number" class="form-control price-input" value="8" min="0" step="0.01" />
-                <button type="button" class="btn btn-sm btn-outline-light">Edit</button>
-                <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
-              </div>
+            <article class="stat-card">
+              <span class="stat-label">Category</span>
+              <strong>Wristbands</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Status</span>
+              <strong>Active</strong>
             </article>
           </div>
+        </section>
 
-          <button type="button" class="btn btn-outline-light mt-4 rounded-pill px-4">+ Add item</button>
-        </div>
-      </section>
+        <div class="content-grid">
+          <div class="main-column d-flex flex-column gap-4">
+            <section class="editor-card" data-group>
+              <header class="section-header" data-toggle-group>
+                <div>
+                  <p class="section-kicker mb-1">Overview</p>
+                  <h3 class="section-title mb-0">Basic information</h3>
+                </div>
+                <button class="btn btn-link text-light p-0 collapse-btn" type="button" aria-expanded="true" aria-label="Collapse group">
+                  <span class="chevron">⌄</span>
+                </button>
+              </header>
 
-      <section class="option-group card-group-outer" data-group>
-        <header class="group-header d-flex flex-wrap align-items-center justify-content-between gap-3" data-toggle-group>
-          <div class="d-flex align-items-center gap-3">
-            <input class="form-check-input mt-0" type="checkbox" checked aria-label="Enable Keyring shapes" />
-            <h2 class="h5 mb-0">Keyring shapes</h2>
-            <span class="badge rounded-pill text-bg-secondary">3 items</span>
-          </div>
-          <div class="d-flex align-items-center gap-2">
-            <button class="btn btn-link text-light p-0 collapse-btn" type="button" aria-expanded="false" aria-label="Expand group">
-              <span class="chevron">⌄</span>
-            </button>
-            <button class="btn btn-sm btn-outline-danger rounded-pill" type="button">Remove</button>
-          </div>
-        </header>
+              <div class="group-content" data-group-content>
+                <div class="row g-3 mt-1">
+                  <div class="col-md-6">
+                    <label class="form-label">Product type</label>
+                    <select class="form-select dark-select">
+                      <option selected>Regular</option>
+                      <option>Premium</option>
+                      <option>Limited</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Identifier</label>
+                    <input type="text" class="form-control" value="#40" />
+                  </div>
+                  <div class="col-md-8">
+                    <label class="form-label">Product name</label>
+                    <input type="text" class="form-control" value="Woven Embroidered Keyring" />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Slug</label>
+                    <input type="text" class="form-control" value="woven-embroidered-keyring" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Category</label>
+                    <input type="text" class="form-control" value="Wristbands" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Sub-category</label>
+                    <input type="text" class="form-control" value="Elastic Fabric Wristbands" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Short description</label>
+                    <textarea class="form-control" rows="3">Custom embroidered keyring for tag key chain</textarea>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-        <div class="group-content mt-3 d-none" data-group-content>
-          <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <label class="form-label">Caption name</label>
-              <input type="text" class="form-control" value="Shape" />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Short description</label>
-              <input type="text" class="form-control" value="Pick one" />
-            </div>
+            <section class="editor-card" data-group>
+              <header class="section-header" data-toggle-group>
+                <div>
+                  <p class="section-kicker mb-1">Assets</p>
+                  <h3 class="section-title mb-0">Product media</h3>
+                </div>
+                <button class="btn btn-link text-light p-0 collapse-btn" type="button" aria-expanded="true" aria-label="Collapse group">
+                  <span class="chevron">⌄</span>
+                </button>
+              </header>
+
+              <div class="group-content" data-group-content>
+                <div class="media-grid">
+                  <article class="media-tile media-tile-accent">
+                    <span class="media-label">Primary image</span>
+                    <div class="media-preview gradient-one"></div>
+                    <button class="btn btn-sm btn-outline-light rounded-pill mt-3">Replace image</button>
+                  </article>
+                  <article class="media-tile">
+                    <span class="media-label">Gallery</span>
+                    <div class="gallery-row">
+                      <div class="mini-thumb gradient-two"></div>
+                      <div class="mini-thumb gradient-three"></div>
+                      <button class="add-thumb" type="button">+</button>
+                    </div>
+                  </article>
+                  <article class="media-tile wide-tile">
+                    <span class="media-label">Banner</span>
+                    <div class="banner-preview">
+                      <div>
+                        <p class="eyebrow mb-1">Campaign ready</p>
+                        <h4 class="mb-2">Hero banner image</h4>
+                        <p class="text-secondary mb-0">Large-format preview for homepage, slider, and category placements.</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="editor-card" data-group>
+              <header class="section-header" data-toggle-group>
+                <div>
+                  <p class="section-kicker mb-1">Options</p>
+                  <h3 class="section-title mb-0">Product colors</h3>
+                </div>
+                <button class="btn btn-link text-light p-0 collapse-btn" type="button" aria-expanded="true" aria-label="Collapse group">
+                  <span class="chevron">⌄</span>
+                </button>
+              </header>
+
+              <div class="group-content" data-group-content>
+                <div class="chips-wrap mb-4">
+                  <span class="filter-chip active">Solid</span>
+                  <span class="filter-chip">Segmented</span>
+                  <span class="filter-chip">Youth</span>
+                  <span class="filter-chip">Large</span>
+                </div>
+
+                <div class="swatch-grid">
+                  <article class="swatch-card">
+                    <span class="swatch white"></span>
+                    <div>
+                      <h4 class="h6 mb-1">White</h4>
+                      <p class="small text-secondary mb-0">Neutral base</p>
+                    </div>
+                    <strong>$0.00</strong>
+                  </article>
+                  <article class="swatch-card">
+                    <span class="swatch black"></span>
+                    <div>
+                      <h4 class="h6 mb-1">Black</h4>
+                      <p class="small text-secondary mb-0">High contrast</p>
+                    </div>
+                    <strong>$0.00</strong>
+                  </article>
+                  <article class="swatch-card">
+                    <span class="swatch red"></span>
+                    <div>
+                      <h4 class="h6 mb-1">Red</h4>
+                      <p class="small text-secondary mb-0">Bold accent</p>
+                    </div>
+                    <strong>$0.00</strong>
+                  </article>
+                  <article class="swatch-card">
+                    <span class="swatch plaid"></span>
+                    <div>
+                      <h4 class="h6 mb-1">Plaid</h4>
+                      <p class="small text-secondary mb-0">Patterned mix</p>
+                    </div>
+                    <strong>$0.20</strong>
+                  </article>
+                  <article class="swatch-card">
+                    <span class="swatch green"></span>
+                    <div>
+                      <h4 class="h6 mb-1">Sea green</h4>
+                      <p class="small text-secondary mb-0">Fresh tone</p>
+                    </div>
+                    <strong>$0.00</strong>
+                  </article>
+                  <article class="swatch-card">
+                    <span class="swatch ice"></span>
+                    <div>
+                      <h4 class="h6 mb-1">Alice blue</h4>
+                      <p class="small text-secondary mb-0">Soft tint</p>
+                    </div>
+                    <strong>$0.00</strong>
+                  </article>
+                </div>
+              </div>
+            </section>
           </div>
-          <button type="button" class="btn btn-outline-light rounded-pill px-4">+ Add item</button>
+
+          <aside class="side-column d-flex flex-column gap-4">
+            <section class="editor-card compact-card">
+              <div class="section-header static-header">
+                <div>
+                  <p class="section-kicker mb-1">Publishing</p>
+                  <h3 class="section-title mb-0">Visibility</h3>
+                </div>
+              </div>
+              <div class="toggle-stack">
+                <button type="button" class="toggle-pill is-active" data-ui-toggle>
+                  <span>Featured product</span><span class="toggle-state">Yes</span>
+                </button>
+                <button type="button" class="toggle-pill" data-ui-toggle>
+                  <span>Most popular</span><span class="toggle-state">No</span>
+                </button>
+                <button type="button" class="toggle-pill is-active" data-ui-toggle>
+                  <span>Regular delivery</span><span class="toggle-state">Yes</span>
+                </button>
+              </div>
+            </section>
+
+            <section class="editor-card compact-card">
+              <div class="section-header static-header">
+                <div>
+                  <p class="section-kicker mb-1">SEO</p>
+                  <h3 class="section-title mb-0">Search content</h3>
+                </div>
+              </div>
+              <div class="d-flex flex-column gap-3">
+                <div>
+                  <label class="form-label">Meta title</label>
+                  <input type="text" class="form-control" value="Custom Embroidered Keyring | Tag Key Chain" />
+                </div>
+                <div>
+                  <label class="form-label">Meta keywords</label>
+                  <input type="text" class="form-control" value="custom keyring, embroidered keyring, tag key chain" />
+                </div>
+                <div>
+                  <label class="form-label">Meta description</label>
+                  <textarea class="form-control" rows="4">Custom embroidered keyring with modern dark-mode product management layout.</textarea>
+                </div>
+              </div>
+            </section>
+
+            <section class="editor-card compact-card">
+              <div class="section-header static-header">
+                <div>
+                  <p class="section-kicker mb-1">Customer help</p>
+                  <h3 class="section-title mb-0">FAQ</h3>
+                </div>
+              </div>
+              <div class="faq-card">
+                <label class="form-label">Question</label>
+                <input type="text" class="form-control mb-3" value="Can I upload my own artwork?" />
+                <label class="form-label">Answer</label>
+                <textarea class="form-control" rows="4">Yes. Upload art in the media section and our team will review it before production.</textarea>
+              </div>
+            </section>
+          </aside>
         </div>
       </section>
     </main>
