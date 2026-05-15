@@ -1,0 +1,144 @@
+:root {
+  --bg-main: #0f1117;
+  --bg-card: #171b25;
+  --bg-muted: #212735;
+  --border: #30384a;
+  --text-main: #eef2ff;
+  --text-muted: #a6adc3;
+  --primary: #6a8dff;
+}
+
+body {
+  background: radial-gradient(circle at top, #171d2b, #0c0f17 55%);
+  color: var(--text-main);
+  min-height: 100vh;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+}
+
+.prototype-shell {
+  max-width: 980px;
+}
+
+.screen-selector {
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+}
+
+.selector-btn {
+  color: var(--text-muted);
+  border-radius: 9999px !important;
+  border: 0;
+  padding-inline: 1.25rem;
+}
+
+.selector-btn:hover,
+.selector-btn.active {
+  background: #2a3245;
+  color: var(--text-main);
+}
+
+.option-group {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.group-header {
+  border-bottom: 1px solid #252c3d;
+  padding-bottom: 0.9rem;
+}
+
+.group-content {
+  transition: opacity 0.2s ease;
+}
+
+.form-control,
+.form-check-input {
+  background-color: #101521;
+  border-color: #2f3a52;
+  color: var(--text-main);
+}
+
+.form-control:focus,
+.form-check-input:focus {
+  border-color: #6680f8;
+  box-shadow: 0 0 0 0.25rem rgba(106, 141, 255, 0.25);
+  background-color: #101521;
+  color: var(--text-main);
+}
+
+.form-label,
+.small,
+.text-secondary {
+  color: var(--text-muted) !important;
+}
+
+.toggle-pill {
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: #111725;
+  color: var(--text-main);
+  padding: 0.45rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.toggle-pill .toggle-state {
+  color: var(--text-muted);
+}
+
+.toggle-pill.is-active {
+  border-color: #5f7cf0;
+  background: rgba(95, 124, 240, 0.2);
+}
+
+.toggle-pill.is-active .toggle-state {
+  color: #cfd8ff;
+}
+
+.item-row {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: rgba(22, 28, 40, 0.8);
+  padding: 0.85rem;
+}
+
+.thumb-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.6rem;
+  border: 1px dashed #4b5775;
+  background: linear-gradient(135deg, #313f5e, #212b41);
+}
+
+.price-input {
+  width: 84px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #5d80f1;
+  border-color: #5d80f1;
+}
+
+.collapse-btn {
+  text-decoration: none;
+}
+
+.chevron {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 1.1rem;
+}
+
+.collapse-btn[aria-expanded="false"] .chevron {
+  transform: rotate(-90deg);
+}
