@@ -4,7 +4,7 @@ Static Bootstrap-based admin/product-options prototype built with HTML, CSS, and
 
 ## View locally
 
-1. Open `/home/runner/work/UI-UX/UI-UX/index.html` directly in a browser, **or**
+1. Open `./index.html` directly in a browser, **or**
 2. Run a simple static server from the repo root, for example:
 
 ```bash
